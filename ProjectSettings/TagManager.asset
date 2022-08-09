@@ -13,11 +13,11 @@ TagManager:
   - UI
   - Player
   - Floor
-  - Collectible
-  - 
-  - 
-  - 
-  - 
+  - Pools
+  - Managers
+  - Containers
+  - Collectible1
+  - Collectible2
   - TouchController
   - 
   - 

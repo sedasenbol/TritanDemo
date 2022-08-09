@@ -17,7 +17,8 @@ namespace GameCore
         // Called by GameManager.cs when "Game" scene is loaded. 
         public void HandleNewLevel()
         {
-            TemplatePool.Instance.InitializeItemPoolDict();
+            Collectible1Pool.Instance.InitializeItemPoolDict();
+            Collectible2Pool.Instance.InitializeItemPoolDict();
             
             OnNewLevelLoaded?.Invoke();
         }

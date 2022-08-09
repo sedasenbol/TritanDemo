@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9091027223259232730}
   - component: {fileID: 2423787054997508628}
-  m_Layer: 0
+  - component: {fileID: 1615213039}
+  - component: {fileID: 1615213040}
+  m_Layer: 8
   m_Name: Pools
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39,10 +41,41 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9091027223259232728}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2e2d4416497245be87dd82b17e94372f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poolSettings: {fileID: 11400000, guid: 697877799afe4466288536f7b972207f, type: 2}
+  collectibleSpawnSettings: {fileID: 11400000, guid: 7454947c45768426c9e576ff5dd6de66, type: 2}
+  poolSettings: {fileID: 11400000, guid: 13735e535ec4a4310b920cd969689250, type: 2}
+  containerTransform: {fileID: 0}
+--- !u!114 &1615213039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091027223259232728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4796386d40cbc4a798a9e771308387c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectibleSpawnSettings: {fileID: 11400000, guid: 7454947c45768426c9e576ff5dd6de66, type: 2}
+  poolSettings: {fileID: 11400000, guid: cca2ad93ac3544281ae0d9cfc24a946a, type: 2}
+  containerTransform: {fileID: 0}
+--- !u!114 &1615213040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9091027223259232728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c9eba56a14745c9b5582033b3b40b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectibleSpawnSettings: {fileID: 11400000, guid: 7454947c45768426c9e576ff5dd6de66, type: 2}
+  poolSettings: {fileID: 11400000, guid: 13735e535ec4a4310b920cd969689250, type: 2}
   containerTransform: {fileID: 0}

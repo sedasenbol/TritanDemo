@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bfa6af44d6b14deb925603a00958d6e, type: 3}
-  m_Name: PoolSettings
+  m_Name: Collectible2PoolSettings
   m_EditorClassIdentifier: 
   poolSize: 10
-  itemPrefab: {fileID: 1616970227357267926, guid: edbbc04f6c7dd4b8a95a07872a94ea1b, type: 3}
+  itemPrefab: {fileID: 2563214792691617440, guid: e31c9ffc61fc241e5a0455a6e8b572a6, type: 3}

@@ -30,6 +30,20 @@ namespace GameCore
             LoadGameScene();
         }
 
+        private void Update()
+        {
+            if (!UnityEngine.Input.GetKeyDown(KeyCode.R)) {return;}
+
+            RestartGame();
+        }
+
+        private void RestartGame()
+        {
+            SceneManager.UnloadSceneAsync((int)gameInfo.CurrentScene);
+            
+            LoadGameScene();
+        }
+
         private void LoadGameScene()
         {
             SceneManager.LoadScene((int) GameInfo.Scene.Game, LoadSceneMode.Additive);

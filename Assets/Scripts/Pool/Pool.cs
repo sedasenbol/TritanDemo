@@ -6,6 +6,7 @@ namespace Pool
 {
     public abstract class Pool : MonoBehaviour
     {
+        [SerializeField] private CollectibleSpawnSettingsScriptableObject collectibleSpawnSettings;
         [SerializeField] private PoolSettingsScriptableObject poolSettings;
         [SerializeField] private Transform containerTransform;
         
@@ -27,12 +28,21 @@ namespace Pool
             return objectSpawnedTransform;
         }
 
+        public void RecycleGameObject(GameObject go)
+        {
+            go.transform.SetParent(containerTransform);
+            go.SetActive(false);
+            itemPoolQueue.Enqueue(go);
+        }
+    
         //Called by LevelManager.cs when a new level loads.
         public void InitializeItemPoolDict()
         {
-            itemPoolQueue = new Queue<GameObject>(poolSettings.PoolSize);
+            var size = Mathf.Max(collectibleSpawnSettings.TotalSpawnCount, poolSettings.PoolSize);
             
-            InitializeItemPool(poolSettings.PoolSize, itemPoolQueue);
+            itemPoolQueue = new Queue<GameObject>(size);
+            
+            InitializeItemPool(size, itemPoolQueue);
         }
    
         private void InitializeItemPool(int poolSize, Queue<GameObject> newItemPool)

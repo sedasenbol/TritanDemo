@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e17014ef7e87459e8f4c56b4e3e3957, type: 3}
-  m_Name: CameraSettings
+  m_Script: {fileID: 11500000, guid: 8398ac4ec07b45de81452703ae63d158, type: 3}
+  m_Name: CollectibleSpawnSettings
   m_EditorClassIdentifier: 
-  cameraStartPosition: {x: 0, y: 3, z: -10}
-  cameraMovementThreshold: 0.3
-  cameraLerpRatio: 0.8
+  totalSpawnCount: 20
+  spawnHeight: 0
+  overlapSphereRadiusToCheck: 1

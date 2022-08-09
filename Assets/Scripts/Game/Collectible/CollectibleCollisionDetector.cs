@@ -8,7 +8,7 @@ using Pool = Pool.Pool;
 
 namespace Game.Collectible
 {
-    public class CollectibleCollisionInspector : MonoBehaviour
+    public class CollectibleCollisionDetector : MonoBehaviour
     {
         [SerializeField] private CollectibleSpawnSettingsScriptableObject collectibleSpawnSettings;
         [SerializeField] private CollectibleType type;

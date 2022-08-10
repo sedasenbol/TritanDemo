@@ -60,9 +60,11 @@ namespace Player
             
             if (agent.remainingDistance > agent.stoppingDistance) return;
                 
-            if (agent.hasPath && agent.velocity.sqrMagnitude != 0f) return;
+            //if (agent.hasPath && agent.velocity.sqrMagnitude > 0f) return;
                     
             isRunning = false;
+            animator.ResetTrigger("Run");
+            animator.ResetTrigger("Idle");
             animator.SetTrigger("Idle");
         }
 
@@ -90,6 +92,8 @@ namespace Player
             
             agent.SetDestination(destination);
             
+            animator.ResetTrigger("Idle");
+            animator.ResetTrigger("Run");
             animator.SetTrigger("Run");
             isRunning = true;
         }

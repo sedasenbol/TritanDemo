@@ -68,6 +68,8 @@ namespace Game.Collectible
             {
                 Collectible2Pool.Instance.SpawnFromPool(randomSpawnPos, Quaternion.identity);
             }
+            
+            CollectibleCounter.Instance.TotalCollectibleCount++;
         }
     }
 }

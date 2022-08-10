@@ -51,6 +51,7 @@ namespace Input
             for (int i = 0; i < resultCount; i++)
             {
                 CollectibleRecycler.Instance.RecycleGameObject(raycastHits[i].collider.gameObject);
+                CollectibleCounter.Instance.CollectibleCount++;
             }
         }
     }

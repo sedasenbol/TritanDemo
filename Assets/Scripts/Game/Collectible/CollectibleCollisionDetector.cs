@@ -75,8 +75,12 @@ namespace Game.Collectible
                 if (hitCollider == null || !collisionLayers.Contains(hitCollider.gameObject.layer) || hitCollider.gameObject == 
                 gameObject) {continue;}
 
+                CollectibleCounter.Instance.TotalCollectibleCount--;
                 CollectibleRecycler.Instance.RecycleGameObject(gameObject);
+                break;
             }
+
+            checkOverlapSphere = false;
         }
     }
 }

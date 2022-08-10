@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 5001674570941320768}
   - component: {fileID: 2187599897201354098}
   - component: {fileID: 2717486123937091269}
+  - component: {fileID: 5982977687726062400}
+  - component: {fileID: 6768941377657317878}
   m_Layer: 11
   m_Name: Coll1
   m_TagString: Untagged
@@ -75,7 +77,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collectibleSpawnSettings: {fileID: 11400000, guid: 7454947c45768426c9e576ff5dd6de66, type: 2}
+--- !u!114 &5982977687726062400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001674570941320831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bd25789b21c40359da650119cecf5b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   type: 1
+--- !u!208 &6768941377657317878
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001674570941320831}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 0
+  m_Extents: {x: 0.2, y: 0.5, z: 0.2}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 1, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1001 &1080440296558824502
 PrefabInstance:
   m_ObjectHideFlags: 0

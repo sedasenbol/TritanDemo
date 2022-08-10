@@ -11,7 +11,6 @@ namespace Game.Collectible
     public class CollectibleCollisionDetector : MonoBehaviour
     {
         [SerializeField] private CollectibleSpawnSettingsScriptableObject collectibleSpawnSettings;
-        [SerializeField] private CollectibleType type;
         
         private const int COLLIDER_ARRAY_LENGTH = 5;
 
@@ -75,20 +74,8 @@ namespace Game.Collectible
             {
                 if (hitCollider == null || !collisionLayers.Contains(hitCollider.gameObject.layer) || hitCollider.gameObject == 
                 gameObject) {continue;}
-                
-                Debug.Log("1");
-                
-                switch (type)
-                {
-                    case CollectibleType.Type1:
-                        Collectible1Pool.Instance.RecycleGameObject(gameObject);
-                        break;
-                    case CollectibleType.Type2:
-                        Collectible2Pool.Instance.RecycleGameObject(gameObject);
-                        break;
-                    default:
-                        throw new ArgumentOutOfRangeException();
-                }
+
+                CollectibleRecycler.Instance.RecycleGameObject(gameObject);
             }
         }
     }

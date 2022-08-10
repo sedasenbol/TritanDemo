@@ -1,3 +1,4 @@
+using GameCore;
 using UI;
 using UnityEngine;
 
@@ -14,8 +15,11 @@ namespace Game.Collectible
             set
             {
                 collectedCollectibleCount = value; 
-                Debug.Log(collectedCollectibleCount);
                 UIManager.Instance.UpdateCollectibleCounterText(collectedCollectibleCount, totalCollectibleCount);
+
+                if (collectedCollectibleCount != totalCollectibleCount) {return;}
+                
+                LevelManager.Instance.CompleteLevel();
             }
         }
 

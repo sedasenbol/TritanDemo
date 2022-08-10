@@ -24,6 +24,8 @@ namespace UI
         [SerializeField] private TMP_Text currentLevelText;
         [SerializeField] private TMP_Text nextLevelText;
         [SerializeField] private TMP_Text collectibleCounterText;
+
+        private CollectibleImageAnimator collectibleImageAnimator;
         
         //Called by GameManager.cs when the main scene loads.
         public void Initialize(int bestScore, int currentLevelIndex)
@@ -96,6 +98,8 @@ namespace UI
         public void UpdateCollectibleCounterText(int collectedCollectibleCount,int totalCollectibleCount)
         {
             collectibleCounterText.text = $"{collectedCollectibleCount}/{totalCollectibleCount}";
+            
+            collectibleImageAnimator.Animate();
         }
         
         private void OnEnable()
@@ -108,6 +112,13 @@ namespace UI
             scoreTMPText.gameObject.SetActive(true);
             bestScoreTMPText.gameObject.SetActive(true);
             progressSlider.value = 0f;
+
+            collectibleImageAnimator = FindObjectOfType<CollectibleImageAnimator>();
+        }
+
+        private void OnDisable()
+        {
+            collectibleImageAnimator = null;
         }
     }
 }

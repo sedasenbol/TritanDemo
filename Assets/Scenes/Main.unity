@@ -415,6 +415,7 @@ GameObject:
   - component: {fileID: 350627370}
   - component: {fileID: 350627369}
   - component: {fileID: 350627368}
+  - component: {fileID: 350627371}
   m_Layer: 5
   m_Name: IncreaseSpeedButton
   m_TagString: Untagged
@@ -498,6 +499,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 350627371}
+        m_TargetAssemblyTypeName: UI.SpeedButtonAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &350627369
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,6 +549,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 350627366}
   m_CullTransparentMesh: 1
+--- !u!114 &350627371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350627366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351aa056dc6a4b9daaf4b4f8d01c33e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedButtonAnimationSettings: {fileID: 11400000, guid: 648b79772327747bfa9e5769280fda7c, type: 2}
 --- !u!1 &465765390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,11 +1270,11 @@ RectTransform:
   m_Father: {fileID: 619884777}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.015335083, y: 0.00036621094}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0.035003662, y: 0}
   m_SizeDelta: {x: 152.67, y: 100}
-  m_Pivot: {x: 1, y: 1}
+  m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &736235108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1844,7 +1870,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1070291906
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2481,7 +2507,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 3000}
+  m_SizeDelta: {x: 2000, y: 3000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344682396
 MonoBehaviour:
@@ -2745,11 +2771,11 @@ RectTransform:
   m_Father: {fileID: 1344682395}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 1050}
-  m_SizeDelta: {x: 750, y: 100}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.0000038147, y: 0.0000047684}
+  m_SizeDelta: {x: 333.6156, y: 172.9433}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1535399670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2797,8 +2823,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 90
-  m_fontSizeBase: 90
+  m_fontSize: 72
+  m_fontSizeBase: 72
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3421,6 +3447,7 @@ GameObject:
   - component: {fileID: 1973355541}
   - component: {fileID: 1973355540}
   - component: {fileID: 1973355539}
+  - component: {fileID: 1973355542}
   m_Layer: 5
   m_Name: DecreaseSpeedButton
   m_TagString: Untagged
@@ -3504,6 +3531,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1973355542}
+        m_TargetAssemblyTypeName: UI.SpeedButtonAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1973355540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3542,6 +3581,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1973355537}
   m_CullTransparentMesh: 1
+--- !u!114 &1973355542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973355537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351aa056dc6a4b9daaf4b4f8d01c33e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedButtonAnimationSettings: {fileID: 11400000, guid: 648b79772327747bfa9e5769280fda7c, type: 2}
 --- !u!1 &1977289245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3630,6 +3682,7 @@ GameObject:
   - component: {fileID: 1983127547}
   - component: {fileID: 1983127549}
   - component: {fileID: 1983127548}
+  - component: {fileID: 1983127550}
   m_Layer: 5
   m_Name: CollectibleImage
   m_TagString: Untagged
@@ -3652,11 +3705,11 @@ RectTransform:
   m_Father: {fileID: 619884777}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 17, y: 30.1}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -17.052002, y: -21.318054}
   m_SizeDelta: {x: 58.278015, y: 57.3649}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 1, y: 1}
 --- !u!114 &1983127548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3695,6 +3748,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983127546}
   m_CullTransparentMesh: 1
+--- !u!114 &1983127550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983127546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 086638d892f04ca2ba21c30a6641b38c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectibleImageAnimationSettings: {fileID: 11400000, guid: ee7138f87829341fd86238422fb57070, type: 2}
 --- !u!1001 &294746153525734727
 PrefabInstance:
   m_ObjectHideFlags: 0

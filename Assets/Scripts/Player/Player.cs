@@ -22,7 +22,6 @@ namespace Player
         
         private int floorLayerMask;
         private bool isRunning;
-        private float initialPlayerHeight;
         
         private void OnEnable()
         {
@@ -31,8 +30,6 @@ namespace Player
             myTransform = transform;
             raycastHits = new RaycastHit[5];
             floorLayerMask = 1 << LayerMask.NameToLayer("Floor");
-
-            initialPlayerHeight = myTransform.position.y;
             
             TouchController.OnPlayerTapped += OnPlayerTapped;
         }
@@ -81,14 +78,7 @@ namespace Player
 
             if (Physics.RaycastNonAlloc(ray, raycastHits, 50f, floorLayerMask) == 0) {return;}
 
-            var destination = new Vector3()
-            {
-                x = raycastHits[0].point.x,
-                y = initialPlayerHeight,
-                z = raycastHits[0].point.z
-            };
-            
-            agent.SetDestination(destination);
+            agent.SetDestination(raycastHits[0].point);
             
             isRunning = true;
 

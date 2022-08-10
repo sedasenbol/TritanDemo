@@ -43,7 +43,7 @@ namespace Player
 
         public void DecreaseSpeed()
         {
-            agent.speed -= playerMovementSettings.SpeedChangeAmount;
+            agent.speed -= Mathf.Max(playerMovementSettings.SpeedChangeAmount, 0f);
         }
         
         public void IncreaseSpeed()

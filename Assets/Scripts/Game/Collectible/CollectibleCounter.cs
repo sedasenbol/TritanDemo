@@ -26,7 +26,12 @@ namespace Game.Collectible
         public int TotalCollectibleCount
         {
             get => totalCollectibleCount;
-            set => totalCollectibleCount = value;
+            set
+            {
+                collectedCollectibleCount = 0;
+                totalCollectibleCount = value;
+                UIManager.Instance.UpdateCollectibleCounterText(collectedCollectibleCount, totalCollectibleCount);
+            }
         }
     }
 }

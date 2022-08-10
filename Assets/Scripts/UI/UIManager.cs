@@ -23,6 +23,7 @@ namespace UI
         [SerializeField] private Slider progressSlider;
         [SerializeField] private TMP_Text currentLevelText;
         [SerializeField] private TMP_Text nextLevelText;
+        [SerializeField] private TMP_Text collectibleCounterText;
         
         //Called by GameManager.cs when the main scene loads.
         public void Initialize(int bestScore, int currentLevelIndex)
@@ -90,6 +91,11 @@ namespace UI
         {
             scoreTMPText.text = currentScore.ToString("F0");
             bestScoreTMPText.text = $"BEST: {bestScore}";
+        }
+
+        public void UpdateCollectibleCounterText(int collectedCollectibleCount,int totalCollectibleCount)
+        {
+            collectibleCounterText.text = $"{collectedCollectibleCount}/{totalCollectibleCount}";
         }
         
         private void OnEnable()

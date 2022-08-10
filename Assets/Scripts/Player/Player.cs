@@ -13,7 +13,6 @@ namespace Player
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField] private PlayerMovementSettingsScriptableObject playerMovementSettings;
         [SerializeField] private NavMeshAgent agent;
         [SerializeField] private Animator animator;
         
@@ -59,10 +58,9 @@ namespace Player
             if (agent.pathPending) return;
             
             if (agent.remainingDistance > agent.stoppingDistance) return;
-                
-            //if (agent.hasPath && agent.velocity.sqrMagnitude > 0f) return;
-                    
+            
             isRunning = false;
+            
             animator.ResetTrigger("Run");
             animator.ResetTrigger("Idle");
             animator.SetTrigger("Idle");
@@ -92,10 +90,11 @@ namespace Player
             
             agent.SetDestination(destination);
             
+            isRunning = true;
+
             animator.ResetTrigger("Idle");
             animator.ResetTrigger("Run");
             animator.SetTrigger("Run");
-            isRunning = true;
         }
     }
 }

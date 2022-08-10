@@ -8,25 +8,21 @@ namespace Game.Collectible
         private int totalCollectibleCount;
         private int collectedCollectibleCount;
 
-        public int CollectibleCount
+        public int CollectedCollectibleCount
         {
             get => collectedCollectibleCount;
             set
             {
                 collectedCollectibleCount = value; 
                 Debug.Log(collectedCollectibleCount);
-                //UIManager
+                UIManager.Instance.UpdateCollectibleCounterText(collectedCollectibleCount, totalCollectibleCount);
             }
         }
 
         public int TotalCollectibleCount
         {
             get => totalCollectibleCount;
-            set
-            {
-                totalCollectibleCount = value;
-                Debug.Log(totalCollectibleCount);
-            }
+            set => totalCollectibleCount = value;
         }
     }
 }

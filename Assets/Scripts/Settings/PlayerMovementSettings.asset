@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f792d83e17dc4721b370c827a9b85786, type: 3}
   m_Name: PlayerMovementSettings
   m_EditorClassIdentifier: 
-  rotationChangeDuration: 2
+  speedChangeAmount: 0.5
+  maxSpeed: 10
+  minSpeed: 1
